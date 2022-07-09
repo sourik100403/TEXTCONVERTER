@@ -5,7 +5,7 @@ import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
 import Footer from './components/Footer';
- 
+
 function App() {
   const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
   const [alert, setAlert] = useState(null);
@@ -34,13 +34,12 @@ function App() {
   }
   return (
     <>
-
     <Navbar title="Textconverter" mode={mode} toggleMode={toggleMode} key={new Date()} />
     <Alert alert={alert}/>
 
     <div className="container my-3">
-          <TextForm showAlert={showAlert} heading="Try Textconverter - word counter, character counter, remove extra spaces" mode={mode}/>
-    </div>
+    <TextForm showAlert={showAlert} heading="Textconverter" mode={mode}/>
+     </div> 
     <Footer/>
     </> 
 
